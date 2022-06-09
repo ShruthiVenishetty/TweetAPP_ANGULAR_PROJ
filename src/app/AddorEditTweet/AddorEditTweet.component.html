@@ -1,0 +1,31 @@
+<form [formGroup]="AEForm" (ngSubmit)="onAddEdit()">
+    <div *ngIf="isAdd">
+        <label class ="addtweet">ENTER THE TWEET</label>
+        <textarea appTextareaAutosize formControlName="content" rows="5" placeholder="Type your tweet here..."
+            class="text-input"></textarea>
+
+    </div>
+    <div *ngIf="isedit">
+        <label class ="addtweet">EDIT YOUR TWEET HERE </label>
+        <textarea  formControlName="content" rows="5" 
+        class="text-input"></textarea>
+
+    </div>
+    <div *ngIf="isComment">
+        <label class ="addtweet">ADD YOUR COMMENT FOR TWEET {{id}} </label>
+        <textarea  formControlName="content" rows="5" 
+        class="text-input"></textarea>
+
+    </div>
+
+
+    <button type="submit" class="btn btn-warning login" *ngIf="isAdd">ADD TWEET</button>
+    <button type="submit" class="btn btn-warning login" *ngIf="isedit">EDIT TWEET</button>
+    <button type="submit" class="btn btn-warning login" *ngIf="isComment">COMMENT</button>
+</form>
+<div *ngIf="isError">
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Error!</strong>{{errorMsg}}
+    </div>
+</div>

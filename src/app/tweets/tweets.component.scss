@@ -1,0 +1,447 @@
+body {
+    background: #e6ecf0;
+    font-family: 'Asap', sans-serif;
+    font-family: 'Roboto', sans-serif;
+  
+  }
+  img {
+    max-width:100%;
+  }
+  .avator {
+    border-radius:100px;
+    width:48px;
+    margin-right: 15px;
+  }
+  
+  
+  .tweet-wrap {
+    max-width:490px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius:3px;
+    padding: 30px;
+    border-bottom: 1px solid #e6ecf0;
+    border-top: 1px solid #e6ecf0;
+  }
+  
+  .tweet-header {
+    display: flex;
+    align-items:flex-start;
+    font-size:14px;
+  }
+  .tweet-header-info {
+    font-weight:bold;
+  }
+  .tweet-header-info span {
+    color:#657786;
+    font-weight:normal;
+    margin-left: 5px;
+  }
+  .tweet-header-info p {
+    font-weight:normal;
+    margin-top: 5px;
+    
+  }
+  .tweet-img-wrap {
+    padding-left: 60px;
+  }
+  
+  .tweet-info-counts {
+    display: flex;
+    margin-left: 60px;
+    margin-top: 10px;
+  }
+  .tweet-info-counts div {
+    display: flex;
+    margin-right: 20px;
+  }
+  .tweet-info-counts div svg {
+    color:#657786;
+    margin-right: 10px;
+  }
+  @media screen and (max-width:430px){
+    body {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .tweet-header {
+      flex-direction:column;
+    }
+    .tweet-header img {
+      margin-bottom: 20px;
+    }
+    .tweet-header-info p {
+      margin-bottom: 30px;
+    }
+    .tweet-img-wrap {
+      padding-left: 0;
+    }
+    .tweet-info-counts {
+    display: flex;
+    margin-left: 0;
+  }
+  .tweet-info-counts div {
+    margin-right: 10px;
+  }
+  }
+  .img2{
+      background-color: chocolate;
+  }
+  .likesbutton{
+      padding: 0;
+      background: none;
+      border: none;
+     
+     
+  }
+  .delbutton{
+   
+    margin-top: -5px;
+    color:dimgray;
+    background: none;
+    border: none;
+   
+   
+}
+  
+  .green {
+    background-color: green;
+  }
+  @-webkit-keyframes heartBlast
+{
+0% {background-position: left;}
+100% {background-position: right;}
+}
+
+@keyframes heartBlast
+{
+0% {background-position: left;}
+100% {background-position: right;}
+}
+
+.heartAnimation
+{
+-webkit-animation-name: heartBlast; //webkit broswers
+animation-name: heartBlast;
+-webkit-animation-duration: .8s;
+animation-duration: .8s;
+-webkit-animation-iteration-count: 1;
+animation-iteration-count: 1;
+-webkit-animation-timing-function: steps(28); //background frames count 28
+animation-timing-function: steps(28);
+background-position: right;
+}
+
+  .heart {
+    background: url("https://cssanimation.rocks/images/posts/steps/heart.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    position: absolute;
+    left:-14px;
+    background-size:1450px; //actual background size 2900px
+    }
+    .heart:hover
+    {
+    background-position: right; //displaying last heart frame 
+    }
+    .likeCount
+    {
+    margin-top: 13px;
+    margin-left: 28px;
+    font-size: 16px;
+    color: #999999
+    }
+    
+  
+  .red {
+    background-color: red;
+  }
+  $red: #ff3252;
+  .like-button {
+    display: inline-block;
+    position: relative;
+    font-size: 10px;
+    cursor: pointer;
+    // border: 1px solid black;
+    &::before {
+      font-size: 3em;
+      color: #000;
+      content: '♥';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      font-size: 3em;
+      color: $red;
+      content: '♥';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.2s;
+    }
+    &.liked::after {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+
+
+
+
+
+svg{
+    cursor:pointer; overflow:visible; width:60px;
+    #heart{transform-origin:center; animation:animateHeartOut .3s linear forwards;}
+    #main-circ{transform-origin:29.5px 29.5px;}
+  }
+  
+  #Lcheckbox{display:none;}
+  
+  #Lcheckbox:checked + label svg{
+      #heart{transform:scale(.2); fill:#E2264D; animation:animateHeart .3s linear forwards .25s;}
+      #main-circ{transition:all 2s; animation:animateCircle .3s linear forwards; opacity:1;}
+      #grp1{
+        opacity:1; transition:.1s all .3s;
+        #oval1{
+          transform:scale(0) translate(0, -30px);
+          transform-origin:0 0 0;
+          transition:.5s transform .3s;}
+        #oval2{
+          transform:scale(0) translate(10px, -50px);
+          transform-origin:0 0 0;
+          transition:1.5s transform .3s;}
+      }
+      #grp2{
+        opacity:1; transition:.1s all .3s;
+        #oval1{
+          transform:scale(0) translate(30px, -15px); 
+          transform-origin:0 0 0;
+          transition:.5s transform .3s;}
+        #oval2{
+          transform:scale(0) translate(60px, -15px); 
+          transform-origin:0 0 0;
+          transition:1.5s transform .3s;}
+      }
+      #grp3{
+        opacity:1; transition:.1s all .3s;
+        #oval1{
+          transform:scale(0) translate(30px, 0px);
+          transform-origin:0 0 0;
+          transition:.5s transform .3s;}
+        #oval2{
+          transform:scale(0) translate(60px, 10px);
+          transform-origin:0 0 0;
+          transition:1.5s transform .3s;}
+      }
+      #grp4{
+        opacity:1; transition:.1s all .3s;
+        #oval1{
+          transform:scale(0) translate(30px, 15px);
+          transform-origin:0 0 0;
+          transition:.5s transform .3s;}
+        #oval2{
+          transform:scale(0) translate(40px, 50px);
+          transform-origin:0 0 0;
+          transition:1.5s transform .3s;}
+      }
+      #grp5{
+        opacity:1; transition:.1s all .3s;
+        #oval1{
+          transform:scale(0) translate(-10px, 20px);
+          transform-origin:0 0 0;
+          transition:.5s transform .3s;}
+        #oval2{
+          transform:scale(0) translate(-60px, 30px);
+          transform-origin:0 0 0;
+          transition:1.5s transform .3s;}
+      }
+      #grp6{
+        opacity:1; transition:.1s all .3s;
+        #oval1{
+          transform:scale(0) translate(-30px, 0px);
+          transform-origin:0 0 0;
+          transition:.5s transform .3s;}
+        #oval2{
+          transform:scale(0) translate(-60px, -5px);
+          transform-origin:0 0 0;
+          transition:1.5s transform .3s;}
+      }
+      #grp7{
+        opacity:1; transition:.1s all .3s;
+        #oval1{
+          transform:scale(0) translate(-30px, -15px);
+          transform-origin:0 0 0;
+          transition:.5s transform .3s;}
+        #oval2{
+          transform:scale(0) translate(-55px, -30px);
+          transform-origin:0 0 0;
+          transition:1.5s transform .3s;}
+      }
+      #grp2{opacity:1; transition:.1s opacity .3s;}
+      #grp3{opacity:1; transition:.1s opacity .3s;}
+      #grp4{opacity:1; transition:.1s opacity .3s;}
+      #grp5{opacity:1; transition:.1s opacity .3s;}
+      #grp6{opacity:1; transition:.1s opacity .3s;}
+      #grp7{opacity:1; transition:.1s opacity .3s;}
+  }
+  
+  @keyframes animateCircle{
+    40%{transform:scale(10); opacity:1; fill:#DD4688;}
+    55%{transform:scale(11); opacity:1; fill:#D46ABF;}
+    65%{transform:scale(12); opacity:1; fill:#CC8EF5;}
+    75%{transform:scale(13); opacity:1; fill:transparent; stroke:#CC8EF5; stroke-width:.5;}
+    85%{transform:scale(17); opacity:1; fill:transparent; stroke:#CC8EF5; stroke-width:.2;}
+    95%{transform:scale(18); opacity:1; fill:transparent; stroke:#CC8EF5; stroke-width:.1;}
+    100%{transform:scale(19); opacity:1; fill:transparent; stroke:#CC8EF5; stroke-width:0;}
+  }
+  
+  @keyframes animateHeart{
+    0%{transform:scale(.2);}
+    40%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+  }
+  
+  @keyframes animateHeartOut{
+    0%{transform:scale(1.4);}
+    100%{transform:scale(1);}
+  }
+  .alert {
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+    width:80%;
+    padding: 20px;
+    background-color: #961107;
+    color: white;
+  }
+  .alerts {
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+    width:80%;
+    padding: 20px;
+    background-color: #06ac1c;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+
+
+
+
+
+
+
+
+
+  @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+div[class*=box] {
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 { background-color: #39b8eb; }
+.box-2 { background-color: #3C3C3C; }
+.box-3 { background-color: #66A182; }
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+
+.btn-one {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+.tweet{
+  text-align: center;
+  color: #062c3b;
+}
+.listOfTweets{
+ background-color: skyblue;
+}
+

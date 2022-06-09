@@ -1,0 +1,29 @@
+<div class="audience-category">
+  <div class="wrapper">
+    <header class="xl8 lg8 md10 xs10 small10 h4 margin-top-small-medium margin-bottom-large">{{modalTitle}}</header>
+    <div class="xl4 lg4 md1 xs2 small2 close margin-top-small-medium margin-bottom-large">
+      <div class="disp-inline">
+        
+      </div>
+      <button class="close button closebuttomalignment" id="btn-audience-category-close" (click)="onNoClick()">
+        <span><b>X</b></span>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="dynamic-height">
+    <ng-content></ng-content>
+    <div class="close-bottom">
+      <!-- <div class="error-message caption cmsleftAlign" *ngIf="showError">
+        <cms [page]="pageName" [label]="lableName"></cms>
+      </div> -->
+      <!-- <upp-raised-button *ngIf="!apiFlag" id="'btn-advertisers-networks-confirm'" disabled="{{modalValuesSelected}}"
+        (clickEvent)="onConfirm()">
+
+        <cms page="SegmentModalDataPage" class="button" label="ConfirmMsg"></cms>
+      </upp-raised-button> -->
+    </div>
+  </div>
+
+</div>

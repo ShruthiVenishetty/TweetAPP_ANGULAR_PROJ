@@ -1,0 +1,16 @@
+<h1 class="tweet">ALL USERS</h1>
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let user of userList">
+
+    <div class="card">
+      <img src="https://cdn1.vectorstock.com/i/1000x1000/26/85/young-executive-woman-profile-icon-vector-9692685.jpg" class="card-img-top"
+        width="200" height="200" alt="Background Image">
+      <div>
+        <h6 class="card-title pt-3 pl-3 fon">{{user.FirstName}} {{user.LastName}}</h6>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center coursename">{{user.LoginId}}</h5>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+// @import 'src/app/shared/scss/common/variables/index.scss';
+// @import 'src/app/shared/scss/common/fonts/fonts.scss';
+.audience-category{
+  position: relative;
+  margin: 1rem 0rem 2.5rem 1rem;
+.header {
+    font-size: large;
+}
+.close{
+    border: 0rem;
+    outline: 0rem;
+    box-shadow: none;
+    font-size: 0.875rem;
+    span{
+        width: 0.875rem;
+        height: 0.875rem;
+    }
+   }
+
+.close,.search {
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    button{
+        min-width:auto;
+        background: transparent;
+    }
+}
+
+
+.mat-radio-label-content {
+    text-align: left;
+}
+
+.mat-lable-custoum-class {
+    display: inline-flex;
+    align-items: flex-start;
+    white-space: pre-line;
+    vertical-align: middle;
+    width: 100%;
+    text-align: left;
+}
+
+
+.close-bottom {
+    position: absolute;
+    right: 0.5rem;
+    bottom: -4.5rem;
+}
+
+.dynamic-height {
+  max-height: 57vh;
+  min-width: calc(85vw - 9rem);
+  overflow-y: auto;
+  margin-bottom:5rem;
+  margin-right: 1rem;
+  &::-webkit-scrollbar-track {
+      margin-top: 68px;
+  }
+  &::-webkit-scrollbar-thumb {
+      height: 3.5rem;
+  }
+}
+
+::ng-deep .mat-checkbox-frame {
+    border-color: var(--upp-color-primary);
+}
+::ng-deep .mat-form-field-label {
+    font-family: var(--upp-fonts) !important;
+}
+
+}
+
+// input{
+//     ::placeholder{
+//        // @include applyStyle(normal,1rem, 0.5px, 1.25rem);
+//     }
+//     @include applyStyle(normal,
+//      1rem,
+//      0.5px, 1.25rem);
+//     }
+//     #mat-segment-search{
+//         @include getElementWidth(14rem);
+//         position: relative;
+//         top: -0.5rem;
+//     }
+//     .paddingSpan{
+//         padding-left: 0.5rem;
+//     }
+
+//     .disp-inline {
+//     margin-right: 4rem;
+//     }
+//      .closebuttomalignment {
+//         align-self: flex-start;
+//         padding-top: 0.8rem;
+//         padding-bottom: 0.75rem;
+//         padding-right: 0.75rem;
+//         padding-left: 0.75rem;
+//      }
+
+//      .cmsleftAlign {
+//         margin-right: 54rem;
+//      }

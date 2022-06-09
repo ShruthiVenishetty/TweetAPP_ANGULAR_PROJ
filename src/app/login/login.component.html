@@ -1,0 +1,32 @@
+<form [formGroup]="LoginForm" (ngSubmit)="onLogin()">  
+    <h1 class="tweet">LOGIN FORM</h1> 
+    <div class="form-group">
+        <label class="label">ENTER YOUR EMAIL</label>
+        <input type="text" formControlName="email" placeholder="Email" class="form-control"
+        />
+    </div>
+    <div class="form-group">
+        
+        <label class="label">ENTER YOUR PASSWORD</label>
+        <input type="password" formControlName="password" placeholder="Password" class="form-control"
+             />
+    </div>
+
+    <button type="submit" class="btn btn-warning login">LOGIN</button>
+    <div class="form-group form-check">
+        <a href="forgot" class="forgotpass">Forgot password?</a>
+    </div>
+    <p class="text-center">Not a member yet? <a href="register" class="registernow">Register now</a></p>
+</form>
+<div *ngIf="isError">
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Error!</strong>{{errorMsg}}
+    </div>
+</div>
+<div *ngIf="isSuccess">
+    <div class="alerts">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Success!</strong>{{successMsg}}
+    </div>
+</div>
