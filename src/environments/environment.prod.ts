@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUri: "https://tweetapplicationshruthi.azurewebsites.net/api/v1.0/tweets"
 };

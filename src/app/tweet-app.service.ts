@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ForgotPassword, Register, Tweet } from './Tweet-app.model';
-// import * as Urls from 'src/app/Address.json';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
     providedIn: 'root'
@@ -13,17 +13,19 @@ export class TweetAppService {
 
 
     // addr:{baseUrl:string}[]=Urls;
-    readonly baseURL = "https://localhost:5001/api/v1.0/tweets";
+    readonly baseURL = environment.baseUri;
     readonly token = localStorage.getItem('token');
 
 
     constructor(private http: HttpClient) { }
 
     getAllTweets(): Observable<any> {
+        console.log(this.token);
         const headers = {
             'content-type': 'application/json',
             'Authorization': 'Bearer '+ this.token
         }
+        
         return this.http.get(this.baseURL + '/all', { 'headers': headers });
     }
     login(email: string, password: string): Observable<any> {
